@@ -69,8 +69,11 @@ library(fontawesome)
 
 ### 21/02/2022 (updated: `r format(Sys.time(), "%d/%m/%Y")`)
 `r fa("link", fill = "#562457")`https://andrewmaclachlan.github.io/Spatial-analysis-of-public-health-data-23/#1
+
+`r fa("file-pdf", fill = "#562457")` [PDF presentation](https://github.com/andrewmaclachlan/CASA0023-lecture-6/blob/main/index.pdf)
+
 .pull-left[### Andy MacLachlan
-`r fa("paper-plane", fill = "white")` [a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
+`r fa("paper-plane", fill = "#562457")` [a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
 `r fa("twitter", fill = "#562457")` [andymaclachlan](https://twitter.com/andymaclachlan)
 `r fa("github", fill = "#562457")` [andrewmaclachlan](https://github.com/andrewmaclachlan)]
 
@@ -1690,6 +1693,8 @@ Left to right
 
 * Robert (Roy) Charles Geary (1896-1983) = **Geary’s C**
 
+Image below
+
 * Luc Anselin (1953-present) = **Anselin Moran's I (local)**
 
 
@@ -1700,6 +1705,10 @@ Left to right
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/players.png')
+```
+
+```{r echo=FALSE, out.width='40%', fig.align='center'}
+knitr::include_graphics('img/Anselin.jpg')
 ```
 
 ]
