@@ -68,19 +68,19 @@ library(fontawesome)
 # Spatial analysis of public health data
 
 ### 21/02/2022 (updated: `r format(Sys.time(), "%d/%m/%Y")`)
-`r fa("link", fill = "white")`https://andrewmaclachlan.github.io/Spatial-analysis-of-public-health-data/#1
+`r fa("link", fill = "#562457")`https://andrewmaclachlan.github.io/Spatial-analysis-of-public-health-data-23/#1
 .pull-left[### Andy MacLachlan
-`r fa("paper-plane", fill = "white")`[a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
-`r fa("twitter", fill = "white")`[andymaclachlan](https://twitter.com/andymaclachlan)
-`r fa("github", fill = "white")`[andrewmaclachlan](https://github.com/andrewmaclachlan)]
+`r fa("paper-plane", fill = "white")` [a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
+`r fa("twitter", fill = "#562457")` [andymaclachlan](https://twitter.com/andymaclachlan)
+`r fa("github", fill = "#562457")` [andrewmaclachlan](https://github.com/andrewmaclachlan)]
 
 .pull-right[### Laura Sheppard
-`r fa("paper-plane", fill = "white")`[laura.sheppard.20@ucl.ac.uk](mailto:laura.sheppard.20@ucl.ac.uk)
-`r fa("twitter", fill = "white")`[laurahsheppard](https://twitter.com/laurahsheppard)
-`r fa("github", fill = "white")`[LauraSheppard](https://github.com/LauraSheppard)]
+`r fa("paper-plane", fill = "#562457")` [laura.sheppard.20@ucl.ac.uk](mailto:laura.sheppard.20@ucl.ac.uk)
+`r fa("twitter", fill = "#562457")` [laurahsheppard](https://twitter.com/laurahsheppard)
+`r fa("github", fill = "#562457")` [LauraSheppard](https://github.com/LauraSheppard)]
 
 
-`r fa("map-marker", fill = "white")`[Centre for Advanced Spatial Analysis, UCL](https://www.ucl.ac.uk/bartlett/casa/)
+`r fa("map-pin", fill = "#562457")` [Centre for Advanced Spatial Analysis, UCL](https://www.ucl.ac.uk/bartlett/casa/)
 
 Slide acknowledgement: [Professor Adam Dennett](https://twitter.com/adam_dennett)
 
@@ -93,6 +93,10 @@ xaringanExtra::use_logo(
   position = xaringanExtra::css_position(top = "1em", right = "2em")
 
 )
+```
+
+```{r, echo=FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "bottom")
 ```
 
 # How to use the lectures
@@ -2394,3 +2398,7 @@ class: inverse, center, middle
 
 ### Local Moran's I shows....?
 
+```{r include=FALSE}
+library(xaringanBuilder)
+build_pdf("index.html", complex_slides = TRUE)
+```
