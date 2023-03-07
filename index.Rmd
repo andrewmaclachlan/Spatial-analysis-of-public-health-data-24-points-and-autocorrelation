@@ -70,7 +70,7 @@ library(fontawesome)
 ### 21/02/2022 (updated: `r format(Sys.time(), "%d/%m/%Y")`)
 `r fa("link", fill = "#562457")`https://andrewmaclachlan.github.io/Spatial-analysis-of-public-health-data-23/#1
 
-`r fa("file-pdf", fill = "#562457")` [PDF presentation](https://github.com/andrewmaclachlan/CASA0023-lecture-6/blob/main/index.pdf)
+`r fa("file-pdf", fill = "#562457")` [PDF presentation](https://github.com/andrewmaclachlan/Spatial-analysis-of-public-health-data-23/blob/main/index.pdf)
 
 .pull-left[### Andy MacLachlan
 `r fa("paper-plane", fill = "#562457")` [a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
@@ -1098,9 +1098,9 @@ class: inverse, center, middle
 
  $$K(r) = \lambda^{-1} \sum{i}\sum{j}\frac{I(d_ij<r)}{n}$$
 
-* In English: Ripley’s K value for any circle radius $r$ = the average density of points at that radius $\lambda = (n/ \Pi r^2))$
+* In English: Ripley’s K value for any circle radius $r$ = the average density of points for the entire study region (of all locations) $\lambda = (n/ \Pi r^2))$
 
-* Multiplied by the sum of the distances $d_ij$ between all points within that search radius
+* Multiplied by the sum of the distances $d_ij$ between all points within a search radius
 
 * Divided by the total number of points, n
 
@@ -1469,20 +1469,17 @@ knitr::include_graphics('img/average_GCSE.png')
 
 * In what instance might we be able to use count data?
 
-* Discuss in groups for 1 min 30 seconds?
-
-`r countdown(minutes=1, seconds =30, warn_when = 10, bottom=0, left="65%")`
 ---
 
 class: inverse, center, middle
 
-# How would you go from point data to **continuous observations**
+# How would you go from point data to continuous observations
 
-## What are **spatially continuous observations ?** 
+## What are spatially continuous observations ?
 
 --
 
-## continuous observatios over a surface e.g. temperature
+## continuous observations over a surface e.g. temperature
 
 ---
 # From points to spatially continuous observations 2
@@ -1588,6 +1585,15 @@ knitr::include_graphics('img/Waldo_Tobler_2007.jpg')
 
 
 ]
+---
+
+class: inverse, center, middle
+
+# But ...
+
+“Everything is related to everything else, but near things are more related than distant things” always holds absolutely. 
+
+> This is and has always been an oversimplification, disguising possible underlying entitation, support and other mis-specification problems. Are the units of observation appropriate for the scale of the underlying spatial process? Could the spatial patterning of the variable of interest for the chosen entitation be accounted for by another variable?, [Edzer Pebesma, Roger Bivand](https://r-spatial.org/book/15-Measures.html)
 ---
 
 # Spatially continuous observations 
@@ -1892,7 +1898,7 @@ Standardisation **permits comparable** spatial parameters where features might b
 
 When you standardise (usually row) the fact that one unit has 20 neighbours and another 2 doesn't influence the results that much, but it would in binary. When we aggregate data the structure (e.g. polygons) aren't made for (or designed for) our point data (e.g. blue plaques, fly tipping etc). See [this ESRI help link](https://community.esri.com/t5/spatial-statistics-questions/row-standardisation-questions/td-p/440656)
 
-Global
+Global (matrix from previous slides)
 * Sum the weights = 18
 * Divide our units by this = 6/18 
 * Each weight is given 0.33
@@ -1924,12 +1930,13 @@ knitr::include_graphics('img/moran_i_first.png')
 
 2. Work out the deviation (polygon - mean of neighbours)
 
+**top**
 * Value of unit (i) - mean(polygon - mean)
-* Value of unit (i) - mean ^2 (polygon - mean)^2
 * Value of neighbour (j) - mean(polygon - mean)
-* Value of neighbour (j) - mean ^2 (polygon - mean)^2
+**bottom**
+* Value of unit (i) - mean ^2 (polygon - mean)^2
 
-```{r echo=FALSE, out.width='64%', fig.align='center'}
+```{r echo=FALSE, out.width='55%', fig.align='center'}
 knitr::include_graphics('img/top_bottom.png')
 ```
 ---
@@ -2109,7 +2116,7 @@ LISA = Local indicators of spatial association
 
 **Local Moran's I explained**
 
-* Difference between a value and neighbours * sum of differences between neighbours and mean
+* Difference between the value and mean (or neighbourhood) * sum of differences between neighbours and mean
 
 ```{r echo=FALSE, out.width='20%', fig.align='center'}
 knitr::include_graphics('img/local_I.png')
@@ -2206,7 +2213,7 @@ We interpret this as...
 
 * **Core idea** is to identify areas that are more similar (or dissimilar) to surroundings based on what we expect by chance!
 
-* In this case Prof Dani Arribas-Bel has standardised the values (subtract average and devided by standard deviation) for brexit votes
+* In this case Prof Dani Arribas-Bel has standardised the values (subtract average and divided by standard deviation) for brexit votes
 
 * This gives us those with above average leave voting and below average leave voting
 
@@ -2230,7 +2237,7 @@ knitr::include_graphics('img/07_local_autocorrelation_21_0.png')
 
 # Local versions (LISA) - Anselin Moran's I
 
-Combine this idea with significane (either p or z score)
+Combine this idea with significance (either p or z score)
 
 I have done this using `case_when()`!
 
@@ -2304,7 +2311,7 @@ class: inverse, center, middle
 * Similar concept but **just returns a z score**
   * standardised value relating to whether high values or low values are clustering together
   * However....this is the local sum comapred to the **sum of all features**
-  * A high value = sum of values within a neighborhood of a given radius or configuration is high relative to the global average
+  * A high value = sum of values within a neighborhood of a given radius or configuration is high relative to the **global average**
 
 * More intense clustering of high values = hot spot 
 
