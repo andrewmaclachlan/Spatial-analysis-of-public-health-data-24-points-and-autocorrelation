@@ -1,7 +1,7 @@
 ---
 title: "Spatial analysis of public health data"
 subtitle: "Point Pattern Analysis"
-author: "Andy MacLachlan + Laura Sheppard"
+author: "Andy MacLachlan"
 output:
   xaringan::moon_reader:
     css: ["custom.css", "default", "rladies", "rladies-fonts"]    
@@ -68,19 +68,12 @@ library(fontawesome)
 # Spatial analysis of public health data
 
 ### 21/02/2022 (updated: `r format(Sys.time(), "%d/%m/%Y")`)
-`r fa("link", fill = "#562457")`https://andrewmaclachlan.github.io/Spatial-analysis-of-public-health-data-23/#1
 
-`r fa("file-pdf", fill = "#562457")` [PDF presentation](https://github.com/andrewmaclachlan/Spatial-analysis-of-public-health-data-23/blob/main/index.pdf)
-
-.pull-left[### Andy MacLachlan
+### Andy MacLachlan
 `r fa("paper-plane", fill = "#562457")` [a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
 `r fa("twitter", fill = "#562457")` [andymaclachlan](https://twitter.com/andymaclachlan)
-`r fa("github", fill = "#562457")` [andrewmaclachlan](https://github.com/andrewmaclachlan)]
-
-.pull-right[### Laura Sheppard
-`r fa("paper-plane", fill = "#562457")` [laura.sheppard.20@ucl.ac.uk](mailto:laura.sheppard.20@ucl.ac.uk)
-`r fa("twitter", fill = "#562457")` [laurahsheppard](https://twitter.com/laurahsheppard)
-`r fa("github", fill = "#562457")` [LauraSheppard](https://github.com/LauraSheppard)]
+`r fa("github", fill = "#562457")` [andrewmaclachlan](https://github.com/andrewmaclachlan)
+`r fa("file-pdf", fill = "#562457")` [PDF presentation](https://github.com/andrewmaclachlan/Spatial-analysis-of-public-health-data-23/blob/main/index.pdf)
 
 
 `r fa("map-pin", fill = "#562457")` [Centre for Advanced Spatial Analysis, UCL](https://www.ucl.ac.uk/bartlett/casa/)
@@ -126,39 +119,6 @@ xaringanExtra::use_progress_bar(color = "#0051BA", location = "bottom")
 class: inverse, center, middle
 
 # Slide and content acknowledgement: [Professor Adam Dennett](https://twitter.com/adam_dennett)
-
----
-
-# About me
-
-* Undergraduate in human geography, University of Sheffield + year abroad at the University of Wollongong
-
-* MSc in Remote Sensing and GIS, University of Southampton 
-
-* PhD in Geography and Environmental Science, University of Southampton / University of Western Australia "Earth Observation for Quantifying Urban Growth and its Application to Sustainable City Development"
-
-* Teaching Fellow and now lecturer in The Barlett Centre for Advanced Spatial Analysis + lead our MSc/MRes Urban Spatial Science
-
-* [Research:](https://scholar.google.com/citations?user=wLrJwyQAAAAJ&hl=en)
-  * Geospatial tools / data for sustainable planning and environmental decision making 
-  
-* Teaching:
-  * [Geographic Information Systems and Science](https://andrewmaclachlan.github.io/CASA0005repo/)
-  * [Remotely Sensing Cities and Environments](https://andrewmaclachlan.github.io/CASA0023/)  
----
-
-# About Laura
-
-* Undergraduate degree in Geography with Quantitative Research Methods, University of Bristol
-* Master’s degree in Advanced Quantitative Methods, University of Bristol
-* PhD degree (started in September 2020) in Advanced Spatial Analysis at CASA, UCL
-
-Research:
-* PhD is on Gendering the Research Pipeline and Diversifying Doctoral Education – includes gender and higher educational inequalities using data science and machine learning (validation, ensemble models, gender inferencing algorithms, text & pdf analysis, multilevel modelling, mapping, visualisations etc.)
-
-Teaching:
-* Taught on Geographic Information Systems and Science module in CASA for the last two years 
-* Associate Fellow of Higher Education Academy
 
 
 ---
