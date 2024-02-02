@@ -67,6 +67,8 @@ library(fontawesome)
 
 # Spatial analysis of public health data
 
+## Point pattern and autocorrelation
+
 ### 21/02/2022 (updated: `r format(Sys.time(), "%d/%m/%Y")`)
 
 ### Andy MacLachlan
@@ -112,14 +114,6 @@ xaringanExtra::use_progress_bar(color = "#0051BA", location = "bottom")
 - Alternatively just typing the slide number e.g. 10 on the website will take you to that slide
 
 - Pressing alt+F will fit the slide to the screen, this is useful if you have resized the window and have another open - side by side. 
-
-
----
-
-class: inverse, center, middle
-
-# Slide and content acknowledgement: [Professor Adam Dennett](https://twitter.com/adam_dennett)
-
 
 ---
 # Outline
